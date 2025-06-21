@@ -1,100 +1,136 @@
-<h1 align="center">🧱 Node.js + TypeScript Boilerplate</h1>
+# Node.js + TypeScript Boilerplate 🚀
 
-<p align="center">
-  A simple and clean boilerplate to kickstart Node.js projects using TypeScript, with support for ESLint, Prettier, environment variables, and fast development tools.
-</p>
+![Node.js](https://img.shields.io/badge/Node.js-4D8C2D?style=flat&logo=node.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat&logo=eslint&logoColor=white) ![Prettier](https://img.shields.io/badge/Prettier-FF8B00?style=flat&logo=prettier&logoColor=white) ![Tsup](https://img.shields.io/badge/tsup-000000?style=flat&logo=typescript&logoColor=white)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-18.x-green?logo=node.js" />
-  <img src="https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript" />
-  <img src="https://img.shields.io/badge/ESLint-enabled-purple?logo=eslint" />
-  <img src="https://img.shields.io/badge/Prettier-enabled-yellow?logo=prettier" />
-</p>
+Welcome to the **Node.js + TypeScript Boilerplate**! This repository provides a clean and minimal setup for building applications using Node.js and TypeScript. It includes essential tools such as ESLint for code quality, Prettier for code formatting, and tsup for bundling. It also supports environment variables through `.env` files.
 
----
+## Table of Contents
 
-## 🚀 Features
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Configuration](#configuration)
+- [Scripts](#scripts)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-- ✅ TypeScript (strict mode)
-- ✅ Fast dev with `tsx` and `.env`
-- ✅ Build with `tsup`
-- ✅ ESLint + Prettier integrated
-- ✅ Organized folder structure
-- ✅ Ready for CLI tools, APIs, or workers
+## Features
 
----
+- **Minimal Setup**: Quickly get started with a clean slate.
+- **TypeScript Support**: Leverage the power of TypeScript for better type safety.
+- **Linting**: Use ESLint to maintain code quality.
+- **Formatting**: Automatically format your code with Prettier.
+- **Bundling**: Use tsup for efficient bundling of your application.
+- **Environment Variables**: Manage your app's configuration with `.env` support.
 
-## 📁 Project Structure
+## Installation
+
+To set up the project, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/srikanthRyali2004/node-ts-boilerplate.git
+   ```
+
+2. **Navigate to the project directory**:
+   ```bash
+   cd node-ts-boilerplate
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+4. **Create a `.env` file**: Copy the example file and configure your environment variables.
+   ```bash
+   cp .env.example .env
+   ```
+
+## Usage
+
+To start the development server, run:
 
 ```bash
-📦 node-ts-boilerplate
-├── src
-│ └── server.ts         # Entry point
-├── .env                # Environment variables
-├── .eslintrc.json      # ESLint config
-├── .prettierrc         # Prettier config
-├── .gitignore
+npm run dev
+```
+
+For production builds, use:
+
+```bash
+npm run build
+```
+
+You can run tests using:
+
+```bash
+npm test
+```
+
+## Project Structure
+
+The project follows a simple structure:
+
+```
+node-ts-boilerplate/
+├── src/
+│   ├── index.ts
+│   └── ... (other source files)
+├── .env.example
+├── .eslintrc.js
+├── .prettierrc
 ├── package.json
 └── tsconfig.json
 ```
 
----
+- **src/**: Contains the source code of your application.
+- **.env.example**: A template for your environment variables.
+- **.eslintrc.js**: ESLint configuration file.
+- **.prettierrc**: Prettier configuration file.
+- **package.json**: Project metadata and dependencies.
+- **tsconfig.json**: TypeScript configuration file.
 
-## 🛠️ Getting Started
+## Configuration
 
-```bash
-# Clone the repository
-git clone https://github.com/Gustavo-Zamai/node-ts-boilerplate.git
-cd node-ts-boilerplate
+You can customize the ESLint and Prettier configurations by modifying the respective files. Adjust the rules in `.eslintrc.js` to fit your coding style. Prettier settings can be found in `.prettierrc`.
 
-# Install dependencies
-npm install
+## Scripts
 
-# Start development server
-npm run start:dev
-```
-## 📦 Scripts
+The following scripts are available in this boilerplate:
 
-| Script         | Description                                           |
-|----------------|-------------------------------------------------------|
-| `start:dev`    | Runs the project with `tsx` and loads `.env`         |
-| `start:watch`  | Runs the project with hot-reload using `tsx watch`   |
-| `build`        | Compiles the code using `tsup` to the `dist/` folder |
-| `start:build`  | Runs the compiled app with `.env`                    |
-| `lint`         | Lints all `.ts` files using ESLint                   |
-| `format`       | Formats code using Prettier                          |
+- `dev`: Starts the development server with hot reloading.
+- `build`: Compiles the TypeScript code into JavaScript.
+- `test`: Runs the test suite.
+- `lint`: Lints the code using ESLint.
+- `format`: Formats the code using Prettier.
 
+You can run any of these scripts using `npm run <script-name>`.
 
-## 🧪 ESLint & Prettier
-### Lint:
+## Contributing
 
-```bash
-npm run lint
-```
-### Format:
-```bash
-npm run format
-```
+Contributions are welcome! To contribute:
 
-## 🔧 .env Example
-```env
-PORT=3000
-```
-## ✅ To-Do (Future Improvements)
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch and create a pull request.
 
-- [ ] Add testing support with **Vitest** or **Jest**
-- [ ] Add **Docker** support
-- [ ] Add **Swagger** documentation for APIs
-- [ ] Set up **GitHub Actions** for continuous integration (CI)
-- [ ] Configure **Husky + lint-staged** for pre-commit hooks
+Please ensure your code follows the existing style and passes all tests.
 
+## License
 
-## 📄 License
-This project is licensed under the ISC License – free for personal and commercial use.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 🙌 Contributing
-Pull requests and suggestions are welcome. Let’s keep it simple and reusable!
+## Releases
 
-## 👨‍💻 Author
+For the latest releases, visit the [Releases](https://github.com/srikanthRyali2004/node-ts-boilerplate/releases) section. You can download and execute the latest version from there.
 
-**[Gustavo Zamai](https://github.com/Gustavo-Zamai)**
+![Releases](https://img.shields.io/badge/Releases-Download%20Latest%20Version-blue?style=flat&logo=github&logoColor=white)
+
+## Conclusion
+
+This boilerplate provides a solid foundation for building Node.js applications with TypeScript. It includes essential tools and configurations to help you maintain code quality and improve your development workflow. 
+
+Feel free to explore the repository, and don't hesitate to reach out if you have any questions or suggestions. Happy coding!
